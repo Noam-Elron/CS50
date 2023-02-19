@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: Fastest in best case scenario of already sorted (O(n) in best scenario.) but slow in random and slowest of all (in worst case) when reversed (O(n^2)).
+
+sort2 uses: Merge sort
+
+How do you know?: Performs better than others in worst case and random because time complexity is O(nlog(n)).
+
+sort3 uses: Selection sort
+
+How do you know?: Takes the same amount of time more or less for all case scenarios. Selection sort is always O(n^2).

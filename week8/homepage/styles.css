@@ -1,0 +1,74 @@
+:root {
+  --navbar-link: #545B5A;
+  --navbar-link-hover: #AAB8B6;
+  --background-color: #E9ECE6;
+  --linear1: rgba(2,0,36,1);
+  --linear2: rgba(35,9,121,1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  background: var(--background-color);
+}
+
+.navbar li {
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+
+.navbar li > a.nav-link, .navbar-brand {
+  color: var(--navbar-link);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.navbar-brand {
+  color: var(--navbar-link) !important;
+  font-size: 2.5rem;
+}
+
+.navbar li > a.nav-link:hover, .navbar li > a.nav-link.active{
+  color: var(--navbar-link-hover);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+}
+
+.button-container > button {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(164deg, var(--linear1) 0%, var(--linear2) 38%, rgba(0,212,255,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.button-container > button > span {
+  color: rgba(13,233,242,1);
+}

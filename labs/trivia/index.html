@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function multiChoice(button)
+            {
+                const buttons = document.querySelectorAll('[type=button]');
+                for (let i = 0; i < buttons.length; i++)
+                {
+                    buttons[i].style.background = "#d9edff";
+                }
+                const ans_disp = document.getElementById('ans_disp');
+                if (button.id == "ans1")
+                {
+                    ans_disp.innerHTML = "Correct";
+                    button.style.background= "green";
+                }
+                else
+                {
+                    ans_disp.innerHTML = "Incorrect";
+                    button.style.background= "red";
+                }
+            }
+
+            function input_answer()
+            {
+                const value = document.querySelector('input[type=text]');
+                const show_ans = document.getElementById('ans_inp_disp');
+                if (value.value != "Cheetah")
+                {
+                    value.style.background = "red";
+                    show_ans.innerHTML = "Incorrect";
+                }
+                else
+                {
+                    value.style.background = "green";
+                    show_ans.innerHTML = "Correct";
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What's the capital of Canada</h3>
+                <p id="ans_disp"></p>
+                <button type="button" id="ans1" onclick="multiChoice(this)">Ottawa!</button>
+                <button type="button" id="ans2" onclick="multiChoice(this)">Toronto!</button>
+                <button type="button" id="ans3" onclick="multiChoice(this)">Quebec!</button>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3> What's the fastest land mammal? </h3>
+                <p id="ans_inp_disp"></p>
+                <label for="inp_ans">Animal: </label>
+                <br>
+                <input type="text" id="inp_ans">
+                <button type="button" id="ans1" onclick="input_answer()">Submit</button>
+            </div>
+        </div>
+
+
+    </body>
+</html>
